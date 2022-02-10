@@ -5817,25 +5817,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "1";
+    content: "M";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "P";
+    content: "X";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "0";
+    content: "R";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "B";
+    content: "0";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5853,25 +5853,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "1";
+    content: "M";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "P";
+    content: "X";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "0";
+    content: "R";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "B";
+    content: "0";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5888,22 +5888,22 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "1";
+    content: "M";
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "P";
+    content: "X";
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "0";
+    content: "R";
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "B";
+    content: "0";
     transform: rotateX(0deg);
   }
 
@@ -5920,28 +5920,28 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "1";
+    content: "M";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "P";
+    content: "X";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "0";
+    content: "R";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "B";
+    content: "0";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
@@ -6293,7 +6293,7 @@ input:focus::placeholder {
   margin-bottom: 3.5rem;
 }
 
-.cabin form {
+.cabin .form {
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -6421,6 +6421,10 @@ input:focus::placeholder {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   gap: 2.5rem;
+}
+
+.cabin .crew-member.hidden {
+  display: none;
 }
 
 .cabin .member-img {

@@ -7,8 +7,6 @@ var _aos = _interopRequireDefault(require("aos"));
 
 var _simplebar = _interopRequireDefault(require("./modules/simplebar"));
 
-var _search = _interopRequireDefault(require("./modules/search"));
-
 var _burgerMenu = _interopRequireDefault(require("./modules/burger-menu"));
 
 var _flightMode = _interopRequireDefault(require("./modules/flight-mode"));
@@ -36,8 +34,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   $(function () {
     _simplebar["default"].init();
 
-    _search["default"].init();
-
     _burgerMenu["default"].init();
 
     _flightMode["default"].init();
@@ -64,7 +60,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   });
 })(jQuery);
 
-},{"./modules/burger-menu":3,"./modules/crew-data":4,"./modules/flight-mode":5,"./modules/map":6,"./modules/postcards":7,"./modules/scroll-smooth":8,"./modules/search":9,"./modules/simplebar":10,"./modules/slider":11,"./modules/sound":12,"aos":1}],3:[function(require,module,exports){
+},{"./modules/burger-menu":3,"./modules/crew-data":4,"./modules/flight-mode":5,"./modules/map":6,"./modules/postcards":7,"./modules/scroll-smooth":8,"./modules/simplebar":9,"./modules/slider":10,"./modules/sound":11,"aos":1}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -107,90 +103,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
 var crewData = function () {
   var crewDataInit = function crewDataInit() {
-    function xmlToJson(xml) {
-      // Create the return object
-      var obj = {};
-
-      if (xml.nodeType == 1) {
-        // element
-        // do attributes
-        if (xml.attributes.length > 0) {
-          obj['@attributes'] = {};
-
-          for (var j = 0; j < xml.attributes.length; j++) {
-            var attribute = xml.attributes.item(j);
-            obj['@attributes'][attribute.nodeName] = attribute.nodeValue;
-          }
-        }
-      } else if (xml.nodeType == 4) {
-        // cdata section
-        obj = xml.nodeValue;
-      } // do children
-
-
-      if (xml.hasChildNodes()) {
-        for (var i = 0; i < xml.childNodes.length; i++) {
-          var item = xml.childNodes.item(i);
-          var nodeName = item.nodeName;
-
-          if (typeof obj[nodeName] === 'undefined') {
-            obj[nodeName] = xmlToJson(item);
-          } else {
-            if (typeof obj[nodeName].length === 'undefined') {
-              var old = obj[nodeName];
-              obj[nodeName] = [];
-              obj[nodeName].push(old);
-            }
-
-            if (_typeof(obj[nodeName]) === 'object') {
-              obj[nodeName].push(xmlToJson(item));
-            }
-          }
-        }
-      }
-
-      return obj;
-    }
-
-    var request = new XMLHttpRequest(); // Open a new connection, using the GET request on the URL endpoint
-
-    request.open('GET', 'https://cms.podgeevents.com/api2/get-members/key/gqnzg8alzltbzoa66mhc8gu0w98jb2yvbju33', true);
-
-    request.onload = function () {
-      var parser = new DOMParser();
-      var response = this.response;
-      var xmlResponse = parser.parseFromString(response, 'text/xml');
-      var jsonStr = JSON.parse(JSON.stringify(xmlToJson(xmlResponse)));
-      var inmatesEl = document.querySelector('.crew-wrap .content');
-      var inmatesHtml = '';
-
-      for (var key in jsonStr.result) {
-        if (jsonStr.result.hasOwnProperty(key)) {
-          var inmate = jsonStr.result[key];
-          var name = "".concat(inmate.First_Name['#cdata-section'], " ").concat(inmate.Last_Name['#cdata-section']);
-          var company = inmate.Company_Name['#cdata-section'];
-          var jobTitle = inmate.Job_Title['#cdata-section'];
-          var image = "https://cms.podgeevents.com/api2/getphoto/key/wlzkl4nyvxem7rviw67yu0sw84fq9mpzvwf2ixv0/dir/150/photo/".concat(inmate.Photo['#cdata-section']);
-          inmatesHtml += "<div class=\"crew-member\" data-aos=\"fade-up\" data-aos-easing=\"ease-in-out\" data-aos-duration=\"1000\"><div class=\"member-img\"><img src=\"".concat(image, "\" alt=\"\"><div class=\"curtain\"><a href=\"google.com\"><img src=\"assets/images/linkedin.png\" alt=\"\"></a><div class=\"handle\"></div></div></div><div class=\"member-info\"><span class=\"name\">").concat(name, "</span><span class=\"position\">").concat(jobTitle, "</span><span class=\"office\">").concat(company, "</span></div></div>");
-        }
-      }
-
-      inmatesEl.innerHTML = inmatesHtml; // open links
-
-      var crewImage = document.querySelectorAll('.crew-member .member-img');
-      crewImage.forEach(function (element) {
-        element.addEventListener('click', function () {
-          element.classList.toggle('opened-link');
-        });
+    var crewImage = document.querySelectorAll('.crew-member .member-img');
+    crewImage.forEach(function (element) {
+      element.addEventListener('click', function () {
+        element.classList.toggle('opened-link');
       });
-    }; // Send request
-
-
-    request.send();
+    });
   };
 
   var init = function init() {
@@ -373,39 +293,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var search = function () {
-  var searchForm = document.getElementById('cabin-search-form');
-
-  var searchFormInit = function searchFormInit() {
-    $('#search-input').val('');
-    $('.crew-member').hide(0).slice(0, 8).show(0);
-    $('#search').hideseek({
-      list: '.cabin-crew .content'
-    });
-  };
-
-  var init = function init() {
-    if (searchForm) {
-      searchFormInit();
-    }
-  };
-
-  return {
-    init: init
-  };
-}();
-
-var _default = search;
-exports["default"] = _default;
-
-},{}],10:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
 var simplebar = function () {
   var simplebarInit = function simplebarInit() {
     var simpleBar = new SimpleBar(document.querySelector('.crew-wrap'), {
@@ -426,7 +313,7 @@ var simplebar = function () {
 var _default = simplebar;
 exports["default"] = _default;
 
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -470,7 +357,7 @@ var swiperSlider = function () {
 var _default = swiperSlider;
 exports["default"] = _default;
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
