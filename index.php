@@ -128,7 +128,7 @@ $membersStr = $Member->get();
               <span class="letter green old-letter-E letter-N"></span>
               <span class="letter green old-letter-blank letter-G"></span>
               <span class="letter green letter-blank"></span>
-              <span class="letter green letter-blank"></span>
+              <span class="letter last green letter-blank"></span>
             </div>
             <div class="row second">
               <span class="letter letter-1"></span>
