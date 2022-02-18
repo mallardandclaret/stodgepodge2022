@@ -402,19 +402,25 @@ exports["default"] = void 0;
 
 var sound = function () {
   var soundButton = document.querySelectorAll('.sound');
-  var audio = document.getElementById('audio');
+  var audioBoard = document.getElementById('audio-board');
+  var audioTannoy = document.getElementById('audio-tannoy');
+  var lastBoardLetter = document.querySelector('.board .row.first .last');
 
   var soundInit = function soundInit() {
     soundButton.forEach(function (element) {
       element.addEventListener('click', function () {
-        if (audio.paused) {
-          audio.play();
+        if (audioBoard.paused) {
+          audioBoard.play();
           element.classList.remove('off');
         } else {
-          audio.pause();
+          audioBoard.pause();
           element.classList.add('off');
         }
       });
+    });
+    lastBoardLetter.addEventListener('animationend', function () {
+      audioBoard.pause();
+      audioTannoy.play();
     });
   };
 

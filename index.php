@@ -539,7 +539,8 @@ $membersStr = $Member->get();
           </div>
         </div>
       </section>
-      <audio src="uploads/The Sounds Of Nature.mp3" id="audio"></audio>
+      <audio src="uploads/departure-board.mp3" id="audio-board"></audio>
+      <audio src="uploads/tannoy.mp3" id="audio-tannoy"></audio>
     </main>
 
   </div>

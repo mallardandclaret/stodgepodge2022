@@ -5888,25 +5888,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "Z";
+    content: "L";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "B";
+    content: "7";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "X";
+    content: "B";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "K";
+    content: "0";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5924,25 +5924,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "Z";
+    content: "L";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "B";
+    content: "7";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "X";
+    content: "B";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "K";
+    content: "0";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5959,22 +5959,22 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "Z";
+    content: "L";
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "B";
+    content: "7";
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "X";
+    content: "B";
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "K";
+    content: "0";
     transform: rotateX(0deg);
   }
 
@@ -5991,28 +5991,28 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "Z";
+    content: "L";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "B";
+    content: "7";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "X";
+    content: "B";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "K";
+    content: "0";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
