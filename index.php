@@ -409,7 +409,7 @@ $membersStr = $Member->get();
           </form>
           <div class="cabin-crew">
             <div class="crew-wrap">
-              <div class="content"></div>
+              <div class="content" id="inmates"></div>
             </div>
           </div>
         </div>
