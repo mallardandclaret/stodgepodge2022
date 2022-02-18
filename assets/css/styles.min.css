@@ -1031,10 +1031,10 @@ input:focus::placeholder {
 
 .board {
   padding: 22rem 0 5rem;
+  /* dynamic function for character classes */
   /* Blank letter */
   /* None letter */
   /* Colon */
-  /* dynamic function for character classes */
   /* Letter animations */
 }
 
@@ -1052,7 +1052,7 @@ input:focus::placeholder {
 
 .board .departure-board::before,
 .board .departure-board::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 3rem;
   height: 30rem;
@@ -1200,11 +1200,373 @@ input:focus::placeholder {
   color: #FFFFFF;
 }
 
-.board .letter-blank::before {
+.board .letter-A::before,
+.board .letter-A::after {
+  content: "A";
+}
+
+.board .letter-B::before,
+.board .letter-B::after {
+  content: "B";
+}
+
+.board .letter-C::before,
+.board .letter-C::after {
+  content: "C";
+}
+
+.board .letter-D::before,
+.board .letter-D::after {
+  content: "D";
+}
+
+.board .letter-E::before,
+.board .letter-E::after {
+  content: "E";
+}
+
+.board .letter-F::before,
+.board .letter-F::after {
+  content: "F";
+}
+
+.board .letter-G::before,
+.board .letter-G::after {
+  content: "G";
+}
+
+.board .letter-H::before,
+.board .letter-H::after {
+  content: "H";
+}
+
+.board .letter-I::before,
+.board .letter-I::after {
+  content: "I";
+}
+
+.board .letter-J::before,
+.board .letter-J::after {
+  content: "J";
+}
+
+.board .letter-K::before,
+.board .letter-K::after {
+  content: "K";
+}
+
+.board .letter-L::before,
+.board .letter-L::after {
+  content: "L";
+}
+
+.board .letter-M::before,
+.board .letter-M::after {
+  content: "M";
+}
+
+.board .letter-N::before,
+.board .letter-N::after {
+  content: "N";
+}
+
+.board .letter-O::before,
+.board .letter-O::after {
+  content: "O";
+}
+
+.board .letter-P::before,
+.board .letter-P::after {
+  content: "P";
+}
+
+.board .letter-Q::before,
+.board .letter-Q::after {
+  content: "Q";
+}
+
+.board .letter-R::before,
+.board .letter-R::after {
+  content: "R";
+}
+
+.board .letter-S::before,
+.board .letter-S::after {
+  content: "S";
+}
+
+.board .letter-T::before,
+.board .letter-T::after {
+  content: "T";
+}
+
+.board .letter-U::before,
+.board .letter-U::after {
+  content: "U";
+}
+
+.board .letter-V::before,
+.board .letter-V::after {
+  content: "V";
+}
+
+.board .letter-W::before,
+.board .letter-W::after {
+  content: "W";
+}
+
+.board .letter-X::before,
+.board .letter-X::after {
+  content: "X";
+}
+
+.board .letter-Y::before,
+.board .letter-Y::after {
+  content: "Y";
+}
+
+.board .letter-Z::before,
+.board .letter-Z::after {
+  content: "Z";
+}
+
+.board .letter-0::before,
+.board .letter-0::after {
+  content: "0";
+}
+
+.board .letter-1::before,
+.board .letter-1::after {
+  content: "1";
+}
+
+.board .letter-2::before,
+.board .letter-2::after {
+  content: "2";
+}
+
+.board .letter-3::before,
+.board .letter-3::after {
+  content: "3";
+}
+
+.board .letter-4::before,
+.board .letter-4::after {
+  content: "4";
+}
+
+.board .letter-5::before,
+.board .letter-5::after {
+  content: "5";
+}
+
+.board .letter-6::before,
+.board .letter-6::after {
+  content: "6";
+}
+
+.board .letter-7::before,
+.board .letter-7::after {
+  content: "7";
+}
+
+.board .letter-8::before,
+.board .letter-8::after {
+  content: "8";
+}
+
+.board .letter-9::before,
+.board .letter-9::after {
+  content: "9";
+}
+
+.board .old-letter-A::before,
+.board .old-letter-A::after {
+  content: "A";
+}
+
+.board .old-letter-B::before,
+.board .old-letter-B::after {
+  content: "B";
+}
+
+.board .old-letter-C::before,
+.board .old-letter-C::after {
+  content: "C";
+}
+
+.board .old-letter-D::before,
+.board .old-letter-D::after {
+  content: "D";
+}
+
+.board .old-letter-E::before,
+.board .old-letter-E::after {
+  content: "E";
+}
+
+.board .old-letter-F::before,
+.board .old-letter-F::after {
+  content: "F";
+}
+
+.board .old-letter-G::before,
+.board .old-letter-G::after {
+  content: "G";
+}
+
+.board .old-letter-H::before,
+.board .old-letter-H::after {
+  content: "H";
+}
+
+.board .old-letter-I::before,
+.board .old-letter-I::after {
+  content: "I";
+}
+
+.board .old-letter-J::before,
+.board .old-letter-J::after {
+  content: "J";
+}
+
+.board .old-letter-K::before,
+.board .old-letter-K::after {
+  content: "K";
+}
+
+.board .old-letter-L::before,
+.board .old-letter-L::after {
+  content: "L";
+}
+
+.board .old-letter-M::before,
+.board .old-letter-M::after {
+  content: "M";
+}
+
+.board .old-letter-N::before,
+.board .old-letter-N::after {
+  content: "N";
+}
+
+.board .old-letter-O::before,
+.board .old-letter-O::after {
+  content: "O";
+}
+
+.board .old-letter-P::before,
+.board .old-letter-P::after {
+  content: "P";
+}
+
+.board .old-letter-Q::before,
+.board .old-letter-Q::after {
+  content: "Q";
+}
+
+.board .old-letter-R::before,
+.board .old-letter-R::after {
+  content: "R";
+}
+
+.board .old-letter-S::before,
+.board .old-letter-S::after {
+  content: "S";
+}
+
+.board .old-letter-T::before,
+.board .old-letter-T::after {
+  content: "T";
+}
+
+.board .old-letter-U::before,
+.board .old-letter-U::after {
+  content: "U";
+}
+
+.board .old-letter-V::before,
+.board .old-letter-V::after {
+  content: "V";
+}
+
+.board .old-letter-W::before,
+.board .old-letter-W::after {
+  content: "W";
+}
+
+.board .old-letter-X::before,
+.board .old-letter-X::after {
+  content: "X";
+}
+
+.board .old-letter-Y::before,
+.board .old-letter-Y::after {
+  content: "Y";
+}
+
+.board .old-letter-Z::before,
+.board .old-letter-Z::after {
+  content: "Z";
+}
+
+.board .old-letter-0::before,
+.board .old-letter-0::after {
+  content: "0";
+}
+
+.board .old-letter-1::before,
+.board .old-letter-1::after {
+  content: "1";
+}
+
+.board .old-letter-2::before,
+.board .old-letter-2::after {
+  content: "2";
+}
+
+.board .old-letter-3::before,
+.board .old-letter-3::after {
+  content: "3";
+}
+
+.board .old-letter-4::before,
+.board .old-letter-4::after {
+  content: "4";
+}
+
+.board .old-letter-5::before,
+.board .old-letter-5::after {
+  content: "5";
+}
+
+.board .old-letter-6::before,
+.board .old-letter-6::after {
+  content: "6";
+}
+
+.board .old-letter-7::before,
+.board .old-letter-7::after {
+  content: "7";
+}
+
+.board .old-letter-8::before,
+.board .old-letter-8::after {
+  content: "8";
+}
+
+.board .old-letter-9::before,
+.board .old-letter-9::after {
+  content: "9";
+}
+
+.board .letter-blank::before,
+.board .letter-blank::after {
   content: " ";
 }
 
-.board .letter-blank::after {
+.board .old-letter-blank::before,
+.board .old-letter-blank::after {
   content: " ";
 }
 
@@ -1214,300 +1576,9 @@ input:focus::placeholder {
   width: 1.2875536480686696vw;
 }
 
-.board .letter-colon::before {
-  content: ":";
-}
-
+.board .letter-colon::before,
 .board .letter-colon::after {
   content: ":";
-}
-
-.board .letter-A::before {
-  content: "A";
-}
-
-.board .letter-A::after {
-  content: "A";
-}
-
-.board .letter-B::before {
-  content: "B";
-}
-
-.board .letter-B::after {
-  content: "B";
-}
-
-.board .letter-C::before {
-  content: "C";
-}
-
-.board .letter-C::after {
-  content: "C";
-}
-
-.board .letter-D::before {
-  content: "D";
-}
-
-.board .letter-D::after {
-  content: "D";
-}
-
-.board .letter-E::before {
-  content: "E";
-}
-
-.board .letter-E::after {
-  content: "E";
-}
-
-.board .letter-F::before {
-  content: "F";
-}
-
-.board .letter-F::after {
-  content: "F";
-}
-
-.board .letter-G::before {
-  content: "G";
-}
-
-.board .letter-G::after {
-  content: "G";
-}
-
-.board .letter-H::before {
-  content: "H";
-}
-
-.board .letter-H::after {
-  content: "H";
-}
-
-.board .letter-I::before {
-  content: "I";
-}
-
-.board .letter-I::after {
-  content: "I";
-}
-
-.board .letter-J::before {
-  content: "J";
-}
-
-.board .letter-J::after {
-  content: "J";
-}
-
-.board .letter-K::before {
-  content: "K";
-}
-
-.board .letter-K::after {
-  content: "K";
-}
-
-.board .letter-L::before {
-  content: "L";
-}
-
-.board .letter-L::after {
-  content: "L";
-}
-
-.board .letter-M::before {
-  content: "M";
-}
-
-.board .letter-M::after {
-  content: "M";
-}
-
-.board .letter-N::before {
-  content: "N";
-}
-
-.board .letter-N::after {
-  content: "N";
-}
-
-.board .letter-O::before {
-  content: "O";
-}
-
-.board .letter-O::after {
-  content: "O";
-}
-
-.board .letter-P::before {
-  content: "P";
-}
-
-.board .letter-P::after {
-  content: "P";
-}
-
-.board .letter-Q::before {
-  content: "Q";
-}
-
-.board .letter-Q::after {
-  content: "Q";
-}
-
-.board .letter-R::before {
-  content: "R";
-}
-
-.board .letter-R::after {
-  content: "R";
-}
-
-.board .letter-S::before {
-  content: "S";
-}
-
-.board .letter-S::after {
-  content: "S";
-}
-
-.board .letter-T::before {
-  content: "T";
-}
-
-.board .letter-T::after {
-  content: "T";
-}
-
-.board .letter-U::before {
-  content: "U";
-}
-
-.board .letter-U::after {
-  content: "U";
-}
-
-.board .letter-V::before {
-  content: "V";
-}
-
-.board .letter-V::after {
-  content: "V";
-}
-
-.board .letter-W::before {
-  content: "W";
-}
-
-.board .letter-W::after {
-  content: "W";
-}
-
-.board .letter-X::before {
-  content: "X";
-}
-
-.board .letter-X::after {
-  content: "X";
-}
-
-.board .letter-Y::before {
-  content: "Y";
-}
-
-.board .letter-Y::after {
-  content: "Y";
-}
-
-.board .letter-Z::before {
-  content: "Z";
-}
-
-.board .letter-Z::after {
-  content: "Z";
-}
-
-.board .letter-0::before {
-  content: "0";
-}
-
-.board .letter-0::after {
-  content: "0";
-}
-
-.board .letter-1::before {
-  content: "1";
-}
-
-.board .letter-1::after {
-  content: "1";
-}
-
-.board .letter-2::before {
-  content: "2";
-}
-
-.board .letter-2::after {
-  content: "2";
-}
-
-.board .letter-3::before {
-  content: "3";
-}
-
-.board .letter-3::after {
-  content: "3";
-}
-
-.board .letter-4::before {
-  content: "4";
-}
-
-.board .letter-4::after {
-  content: "4";
-}
-
-.board .letter-5::before {
-  content: "5";
-}
-
-.board .letter-5::after {
-  content: "5";
-}
-
-.board .letter-6::before {
-  content: "6";
-}
-
-.board .letter-6::after {
-  content: "6";
-}
-
-.board .letter-7::before {
-  content: "7";
-}
-
-.board .letter-7::after {
-  content: "7";
-}
-
-.board .letter-8::before {
-  content: "8";
-}
-
-.board .letter-8::after {
-  content: "8";
-}
-
-.board .letter-9::before {
-  content: "9";
-}
-
-.board .letter-9::after {
-  content: "9";
 }
 
 .board .departure-board span:nth-child(1):before,
@@ -5817,25 +5888,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "M";
+    content: "Z";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "X";
+    content: "B";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "R";
+    content: "X";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "0";
+    content: "K";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5853,25 +5924,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "M";
+    content: "Z";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "X";
+    content: "B";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "R";
+    content: "X";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "0";
+    content: "K";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5888,22 +5959,22 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "M";
+    content: "Z";
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "X";
+    content: "B";
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "R";
+    content: "X";
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "0";
+    content: "K";
     transform: rotateX(0deg);
   }
 
@@ -5920,28 +5991,28 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "M";
+    content: "Z";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "X";
+    content: "B";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "R";
+    content: "X";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "0";
+    content: "K";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
@@ -6293,7 +6364,7 @@ input:focus::placeholder {
   margin-bottom: 3.5rem;
 }
 
-.cabin .form {
+.cabin form {
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -6421,10 +6492,6 @@ input:focus::placeholder {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   gap: 2.5rem;
-}
-
-.cabin .crew-member.hidden {
-  display: none;
 }
 
 .cabin .member-img {

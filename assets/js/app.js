@@ -23,6 +23,8 @@ var _sound = _interopRequireDefault(require("./modules/sound"));
 
 var _map = _interopRequireDefault(require("./modules/map"));
 
+var _board = _interopRequireDefault(require("./modules/board"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // You can write a call and import your functions in this file.
@@ -32,6 +34,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 (function ($) {
   // When DOM is ready
   $(function () {
+    _board["default"].init();
+
     _simplebar["default"].init();
 
     _burgerMenu["default"].init();
@@ -60,7 +64,38 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   });
 })(jQuery);
 
-},{"./modules/burger-menu":3,"./modules/crew-data":4,"./modules/flight-mode":5,"./modules/map":6,"./modules/postcards":7,"./modules/scroll-smooth":8,"./modules/simplebar":9,"./modules/slider":10,"./modules/sound":11,"aos":1}],3:[function(require,module,exports){
+},{"./modules/board":3,"./modules/burger-menu":4,"./modules/crew-data":5,"./modules/flight-mode":6,"./modules/map":7,"./modules/postcards":8,"./modules/scroll-smooth":9,"./modules/simplebar":10,"./modules/slider":11,"./modules/sound":12,"aos":1}],3:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var board = function () {
+  var oldLetters = document.querySelectorAll('span[class*="old-letter"]');
+
+  var boardInit = function boardInit() {
+    oldLetters.forEach(function (element) {
+      element.addEventListener('animationstart', function () {
+        element.classList.remove('old-letter-O', 'old-letter-N', 'old-letter-blank', 'old-letter-T', 'old-letter-I', 'old-letter-M', 'old-letter-E');
+      });
+    });
+  };
+
+  var init = function init() {
+    boardInit();
+  };
+
+  return {
+    init: init
+  };
+}();
+
+var _default = board;
+exports["default"] = _default;
+
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -95,7 +130,7 @@ var burgerMenu = function () {
 var _default = burgerMenu;
 exports["default"] = _default;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -125,7 +160,7 @@ var crewData = function () {
 var _default = crewData;
 exports["default"] = _default;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -162,7 +197,7 @@ var flightMode = function () {
 var _default = flightMode;
 exports["default"] = _default;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -194,7 +229,7 @@ var map = function () {
 var _default = map;
 exports["default"] = _default;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -225,7 +260,7 @@ var postcards = function () {
 var _default = postcards;
 exports["default"] = _default;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -285,7 +320,7 @@ var scrollSmooth = function () {
 var _default = scrollSmooth;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -313,7 +348,7 @@ var simplebar = function () {
 var _default = simplebar;
 exports["default"] = _default;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -357,7 +392,7 @@ var swiperSlider = function () {
 var _default = swiperSlider;
 exports["default"] = _default;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
