@@ -403,7 +403,7 @@ exports["default"] = void 0;
 var sound = function () {
   var soundButton = document.querySelectorAll('.sound');
   var audioBoard = document.getElementById('audio-board');
-  // var audioTannoy = document.getElementById('audio-tannoy');
+  var audioTannoy = document.getElementById('audio-tannoy');
   var lastBoardLetter = document.querySelector('.board .row.first .last');
 
   var soundInit = function soundInit() {
@@ -420,7 +420,7 @@ var sound = function () {
     });
     lastBoardLetter.addEventListener('animationend', function () {
       audioBoard.pause();
-      // audioTannoy.play();
+      audioTannoy.play();
     });
   };
 
