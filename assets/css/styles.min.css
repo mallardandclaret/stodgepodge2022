@@ -5888,7 +5888,7 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "I";
+    content: "A";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
@@ -5900,13 +5900,13 @@ input:focus::placeholder {
   }
 
   60% {
-    content: "K";
+    content: "Y";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "Y";
+    content: "V";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5924,7 +5924,7 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "I";
+    content: "A";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
@@ -5936,13 +5936,13 @@ input:focus::placeholder {
   }
 
   60% {
-    content: "K";
+    content: "Y";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "Y";
+    content: "V";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5959,7 +5959,7 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "I";
+    content: "A";
     transform: rotateX(360deg);
   }
 
@@ -5969,12 +5969,12 @@ input:focus::placeholder {
   }
 
   60% {
-    content: "K";
+    content: "Y";
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "Y";
+    content: "V";
     transform: rotateX(0deg);
   }
 
@@ -5991,7 +5991,7 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "I";
+    content: "A";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
@@ -6005,14 +6005,14 @@ input:focus::placeholder {
   }
 
   60% {
-    content: "K";
+    content: "Y";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "Y";
+    content: "V";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
@@ -6492,6 +6492,10 @@ input:focus::placeholder {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   gap: 2.5rem;
+}
+
+.cabin .crew-member.hidden {
+  display: none;
 }
 
 .cabin .member-img {
