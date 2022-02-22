@@ -328,13 +328,17 @@ html {
 }
 
 body {
-  background-color: #b4ffe7;
+  background-color: #3a1eea;
   line-height: 1.2;
   font-family: "Lato";
   font-size: 1.6rem;
 }
 
 body.overflow {
+  overflow: hidden;
+}
+
+body.lock {
   overflow: hidden;
 }
 
@@ -626,6 +630,20 @@ input:focus::placeholder {
   transition: all 0.3s ease;
 }
 
+.btn.secondary {
+  background-color: #b4ffe7;
+  color: #3a1eea;
+}
+
+.btn.secondary:hover {
+  background-color: #ff2a7a;
+  color: #b4ffe7;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .btn.search {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -818,11 +836,11 @@ input:focus::placeholder {
   margin-right: 0;
 }
 
-.header .buttons button.sound {
+.header .buttons button.sound-btn {
   position: relative;
 }
 
-.header .buttons button.sound.off::before {
+.header .buttons button.sound-btn.off::before {
   content: '✖';
   font-size: 0.9rem;
   color: #FFFFFF;
@@ -980,11 +998,11 @@ input:focus::placeholder {
   fill: #3a1eea;
 }
 
-.header.white .buttons button.wifi {
+.header.white .buttons button.wifi-btn {
   position: relative;
 }
 
-.header.white .buttons button.wifi::before {
+.header.white .buttons button.wifi-btn::before {
   content: '✕';
   font-size: 22px;
   color: #3a1eea;
@@ -995,11 +1013,11 @@ input:focus::placeholder {
   left: 0;
 }
 
-.header.white .buttons button.sound {
+.header.white .buttons button.sound-btn {
   position: relative;
 }
 
-.header.white .buttons button.sound::before {
+.header.white .buttons button.sound-btn::before {
   content: '✖';
   font-size: 0.9rem;
   font-weight: 900;
@@ -1029,8 +1047,148 @@ input:focus::placeholder {
   background-color: #3a1eea;
 }
 
+.loader {
+  background-color: #3a1eea;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.loader-wrap {
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3rem;
+  max-width: 50rem;
+}
+
+.loader-wrap .loader-logo {
+  max-width: 50rem;
+  margin-bottom: 3rem;
+}
+
+.loader-wrap .loader-logo img {
+  width: 100%;
+  display: block;
+}
+
+.loader-wrap p {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.loader-wrap .loading.hidden {
+  display: none;
+}
+
+.loader-wrap .loading span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.loader-wrap .loading-bar {
+  width: 20rem;
+  height: 16px;
+  border: 1px solid white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 4px;
+}
+
+.loader-wrap .loading-bar .bar-fill {
+  width: 0%;
+  height: 100%;
+  -webkit-transition: width .15s ease-out;
+  -o-transition: width .15s ease-out;
+  -moz-transition: width .15s ease-out;
+  transition: width .15s ease-out;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #ff2a7a;
+  position: relative;
+}
+
+.loader-wrap .loading-bar .bar-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(95%, -47%);
+  -moz-transform: translate(95%, -47%);
+  -ms-transform: translate(95%, -47%);
+  -o-transform: translate(95%, -47%);
+  transform: translate(95%, -47%);
+  width: 2.8rem;
+  height: 2.8rem;
+  background-image: url("../images/plane-yellow.svg") !important;
+  -moz-background-size: 100% !important;
+  background-size: 100% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.loader-wrap .btn {
+  padding: 1rem 2.3rem;
+  margin: 4rem 0;
+}
+
+.loader-wrap .disclaimer {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0;
+  margin-bottom: 0;
+}
+
 .board {
   padding: 22rem 0 5rem;
+  background-color: #b4ffe7;
   /* dynamic function for character classes */
   /* Blank letter */
   /* None letter */
@@ -1581,12 +1739,16 @@ input:focus::placeholder {
   content: ":";
 }
 
-.board .departure-board span:nth-child(1):before,
-.board .departure-board span:nth-child(1):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(1):before,
+.board .departure-board span:nth-child(1):after {
   -webkit-animation-delay: 0.16667s;
   -moz-animation-delay: 0.16667s;
   -o-animation-delay: 0.16667s;
@@ -1667,12 +1829,16 @@ input:focus::placeholder {
   transition-delay: 0.66667s;
 }
 
-.board .departure-board span:nth-child(2):before,
-.board .departure-board span:nth-child(2):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(2):before,
+.board .departure-board span:nth-child(2):after {
   -webkit-animation-delay: 0.33333s;
   -moz-animation-delay: 0.33333s;
   -o-animation-delay: 0.33333s;
@@ -1753,12 +1919,16 @@ input:focus::placeholder {
   transition-delay: 0.83333s;
 }
 
-.board .departure-board span:nth-child(3):before,
-.board .departure-board span:nth-child(3):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(3):before,
+.board .departure-board span:nth-child(3):after {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   -o-animation-delay: 0.5s;
@@ -1839,12 +2009,16 @@ input:focus::placeholder {
   transition-delay: 1s;
 }
 
-.board .departure-board span:nth-child(4):before,
-.board .departure-board span:nth-child(4):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(4):before,
+.board .departure-board span:nth-child(4):after {
   -webkit-animation-delay: 0.66667s;
   -moz-animation-delay: 0.66667s;
   -o-animation-delay: 0.66667s;
@@ -1925,12 +2099,16 @@ input:focus::placeholder {
   transition-delay: 1.16667s;
 }
 
-.board .departure-board span:nth-child(5):before,
-.board .departure-board span:nth-child(5):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(5):before,
+.board .departure-board span:nth-child(5):after {
   -webkit-animation-delay: 0.83333s;
   -moz-animation-delay: 0.83333s;
   -o-animation-delay: 0.83333s;
@@ -2011,12 +2189,16 @@ input:focus::placeholder {
   transition-delay: 1.33333s;
 }
 
-.board .departure-board span:nth-child(6):before,
-.board .departure-board span:nth-child(6):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(6):before,
+.board .departure-board span:nth-child(6):after {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
@@ -2097,12 +2279,16 @@ input:focus::placeholder {
   transition-delay: 1.5s;
 }
 
-.board .departure-board span:nth-child(7):before,
-.board .departure-board span:nth-child(7):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(7):before,
+.board .departure-board span:nth-child(7):after {
   -webkit-animation-delay: 1.16667s;
   -moz-animation-delay: 1.16667s;
   -o-animation-delay: 1.16667s;
@@ -2183,12 +2369,16 @@ input:focus::placeholder {
   transition-delay: 1.66667s;
 }
 
-.board .departure-board span:nth-child(8):before,
-.board .departure-board span:nth-child(8):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(8):before,
+.board .departure-board span:nth-child(8):after {
   -webkit-animation-delay: 1.33333s;
   -moz-animation-delay: 1.33333s;
   -o-animation-delay: 1.33333s;
@@ -2269,12 +2459,16 @@ input:focus::placeholder {
   transition-delay: 1.83333s;
 }
 
-.board .departure-board span:nth-child(9):before,
-.board .departure-board span:nth-child(9):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(9):before,
+.board .departure-board span:nth-child(9):after {
   -webkit-animation-delay: 1.5s;
   -moz-animation-delay: 1.5s;
   -o-animation-delay: 1.5s;
@@ -2355,12 +2549,16 @@ input:focus::placeholder {
   transition-delay: 2s;
 }
 
-.board .departure-board span:nth-child(10):before,
-.board .departure-board span:nth-child(10):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(10):before,
+.board .departure-board span:nth-child(10):after {
   -webkit-animation-delay: 1.66667s;
   -moz-animation-delay: 1.66667s;
   -o-animation-delay: 1.66667s;
@@ -2441,12 +2639,16 @@ input:focus::placeholder {
   transition-delay: 2.16667s;
 }
 
-.board .departure-board span:nth-child(11):before,
-.board .departure-board span:nth-child(11):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(11):before,
+.board .departure-board span:nth-child(11):after {
   -webkit-animation-delay: 1.83333s;
   -moz-animation-delay: 1.83333s;
   -o-animation-delay: 1.83333s;
@@ -2527,12 +2729,16 @@ input:focus::placeholder {
   transition-delay: 2.33333s;
 }
 
-.board .departure-board span:nth-child(12):before,
-.board .departure-board span:nth-child(12):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(12):before,
+.board .departure-board span:nth-child(12):after {
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   -o-animation-delay: 2s;
@@ -2613,12 +2819,16 @@ input:focus::placeholder {
   transition-delay: 2.5s;
 }
 
-.board .departure-board span:nth-child(13):before,
-.board .departure-board span:nth-child(13):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(13):before,
+.board .departure-board span:nth-child(13):after {
   -webkit-animation-delay: 2.16667s;
   -moz-animation-delay: 2.16667s;
   -o-animation-delay: 2.16667s;
@@ -2699,12 +2909,16 @@ input:focus::placeholder {
   transition-delay: 2.66667s;
 }
 
-.board .departure-board span:nth-child(14):before,
-.board .departure-board span:nth-child(14):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(14):before,
+.board .departure-board span:nth-child(14):after {
   -webkit-animation-delay: 2.33333s;
   -moz-animation-delay: 2.33333s;
   -o-animation-delay: 2.33333s;
@@ -2785,12 +2999,16 @@ input:focus::placeholder {
   transition-delay: 2.83333s;
 }
 
-.board .departure-board span:nth-child(15):before,
-.board .departure-board span:nth-child(15):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(15):before,
+.board .departure-board span:nth-child(15):after {
   -webkit-animation-delay: 2.5s;
   -moz-animation-delay: 2.5s;
   -o-animation-delay: 2.5s;
@@ -2871,12 +3089,16 @@ input:focus::placeholder {
   transition-delay: 3s;
 }
 
-.board .departure-board span:nth-child(16):before,
-.board .departure-board span:nth-child(16):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(16):before,
+.board .departure-board span:nth-child(16):after {
   -webkit-animation-delay: 2.66667s;
   -moz-animation-delay: 2.66667s;
   -o-animation-delay: 2.66667s;
@@ -2957,12 +3179,16 @@ input:focus::placeholder {
   transition-delay: 3.16667s;
 }
 
-.board .departure-board span:nth-child(17):before,
-.board .departure-board span:nth-child(17):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(17):before,
+.board .departure-board span:nth-child(17):after {
   -webkit-animation-delay: 2.83333s;
   -moz-animation-delay: 2.83333s;
   -o-animation-delay: 2.83333s;
@@ -3043,12 +3269,16 @@ input:focus::placeholder {
   transition-delay: 3.33333s;
 }
 
-.board .departure-board span:nth-child(18):before,
-.board .departure-board span:nth-child(18):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(18):before,
+.board .departure-board span:nth-child(18):after {
   -webkit-animation-delay: 3s;
   -moz-animation-delay: 3s;
   -o-animation-delay: 3s;
@@ -3129,12 +3359,16 @@ input:focus::placeholder {
   transition-delay: 3.5s;
 }
 
-.board .departure-board span:nth-child(19):before,
-.board .departure-board span:nth-child(19):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(19):before,
+.board .departure-board span:nth-child(19):after {
   -webkit-animation-delay: 3.16667s;
   -moz-animation-delay: 3.16667s;
   -o-animation-delay: 3.16667s;
@@ -3215,12 +3449,16 @@ input:focus::placeholder {
   transition-delay: 3.66667s;
 }
 
-.board .departure-board span:nth-child(20):before,
-.board .departure-board span:nth-child(20):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(20):before,
+.board .departure-board span:nth-child(20):after {
   -webkit-animation-delay: 3.33333s;
   -moz-animation-delay: 3.33333s;
   -o-animation-delay: 3.33333s;
@@ -3301,12 +3539,16 @@ input:focus::placeholder {
   transition-delay: 3.83333s;
 }
 
-.board .departure-board span:nth-child(21):before,
-.board .departure-board span:nth-child(21):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(21):before,
+.board .departure-board span:nth-child(21):after {
   -webkit-animation-delay: 3.5s;
   -moz-animation-delay: 3.5s;
   -o-animation-delay: 3.5s;
@@ -3387,12 +3629,16 @@ input:focus::placeholder {
   transition-delay: 4s;
 }
 
-.board .departure-board span:nth-child(22):before,
-.board .departure-board span:nth-child(22):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(22):before,
+.board .departure-board span:nth-child(22):after {
   -webkit-animation-delay: 3.66667s;
   -moz-animation-delay: 3.66667s;
   -o-animation-delay: 3.66667s;
@@ -3473,12 +3719,16 @@ input:focus::placeholder {
   transition-delay: 4.16667s;
 }
 
-.board .departure-board span:nth-child(23):before,
-.board .departure-board span:nth-child(23):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(23):before,
+.board .departure-board span:nth-child(23):after {
   -webkit-animation-delay: 3.83333s;
   -moz-animation-delay: 3.83333s;
   -o-animation-delay: 3.83333s;
@@ -3559,12 +3809,16 @@ input:focus::placeholder {
   transition-delay: 4.33333s;
 }
 
-.board .departure-board span:nth-child(24):before,
-.board .departure-board span:nth-child(24):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(24):before,
+.board .departure-board span:nth-child(24):after {
   -webkit-animation-delay: 4s;
   -moz-animation-delay: 4s;
   -o-animation-delay: 4s;
@@ -3645,12 +3899,16 @@ input:focus::placeholder {
   transition-delay: 4.5s;
 }
 
-.board .departure-board span:nth-child(25):before,
-.board .departure-board span:nth-child(25):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(25):before,
+.board .departure-board span:nth-child(25):after {
   -webkit-animation-delay: 4.16667s;
   -moz-animation-delay: 4.16667s;
   -o-animation-delay: 4.16667s;
@@ -3731,12 +3989,16 @@ input:focus::placeholder {
   transition-delay: 4.66667s;
 }
 
-.board .departure-board span:nth-child(26):before,
-.board .departure-board span:nth-child(26):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(26):before,
+.board .departure-board span:nth-child(26):after {
   -webkit-animation-delay: 4.33333s;
   -moz-animation-delay: 4.33333s;
   -o-animation-delay: 4.33333s;
@@ -3817,12 +4079,16 @@ input:focus::placeholder {
   transition-delay: 4.83333s;
 }
 
-.board .departure-board span:nth-child(27):before,
-.board .departure-board span:nth-child(27):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(27):before,
+.board .departure-board span:nth-child(27):after {
   -webkit-animation-delay: 4.5s;
   -moz-animation-delay: 4.5s;
   -o-animation-delay: 4.5s;
@@ -3903,12 +4169,16 @@ input:focus::placeholder {
   transition-delay: 5s;
 }
 
-.board .departure-board span:nth-child(28):before,
-.board .departure-board span:nth-child(28):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(28):before,
+.board .departure-board span:nth-child(28):after {
   -webkit-animation-delay: 4.66667s;
   -moz-animation-delay: 4.66667s;
   -o-animation-delay: 4.66667s;
@@ -3989,12 +4259,16 @@ input:focus::placeholder {
   transition-delay: 5.16667s;
 }
 
-.board .departure-board span:nth-child(29):before,
-.board .departure-board span:nth-child(29):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(29):before,
+.board .departure-board span:nth-child(29):after {
   -webkit-animation-delay: 4.83333s;
   -moz-animation-delay: 4.83333s;
   -o-animation-delay: 4.83333s;
@@ -4075,12 +4349,16 @@ input:focus::placeholder {
   transition-delay: 5.33333s;
 }
 
-.board .departure-board span:nth-child(30):before,
-.board .departure-board span:nth-child(30):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(30):before,
+.board .departure-board span:nth-child(30):after {
   -webkit-animation-delay: 5s;
   -moz-animation-delay: 5s;
   -o-animation-delay: 5s;
@@ -4161,12 +4439,16 @@ input:focus::placeholder {
   transition-delay: 5.5s;
 }
 
-.board .departure-board span:nth-child(31):before,
-.board .departure-board span:nth-child(31):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(31):before,
+.board .departure-board span:nth-child(31):after {
   -webkit-animation-delay: 5.16667s;
   -moz-animation-delay: 5.16667s;
   -o-animation-delay: 5.16667s;
@@ -4247,12 +4529,16 @@ input:focus::placeholder {
   transition-delay: 5.66667s;
 }
 
-.board .departure-board span:nth-child(32):before,
-.board .departure-board span:nth-child(32):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(32):before,
+.board .departure-board span:nth-child(32):after {
   -webkit-animation-delay: 5.33333s;
   -moz-animation-delay: 5.33333s;
   -o-animation-delay: 5.33333s;
@@ -4333,12 +4619,16 @@ input:focus::placeholder {
   transition-delay: 5.83333s;
 }
 
-.board .departure-board span:nth-child(33):before,
-.board .departure-board span:nth-child(33):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(33):before,
+.board .departure-board span:nth-child(33):after {
   -webkit-animation-delay: 5.5s;
   -moz-animation-delay: 5.5s;
   -o-animation-delay: 5.5s;
@@ -4419,12 +4709,16 @@ input:focus::placeholder {
   transition-delay: 6s;
 }
 
-.board .departure-board span:nth-child(34):before,
-.board .departure-board span:nth-child(34):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(34):before,
+.board .departure-board span:nth-child(34):after {
   -webkit-animation-delay: 5.66667s;
   -moz-animation-delay: 5.66667s;
   -o-animation-delay: 5.66667s;
@@ -4505,12 +4799,16 @@ input:focus::placeholder {
   transition-delay: 6.16667s;
 }
 
-.board .departure-board span:nth-child(35):before,
-.board .departure-board span:nth-child(35):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(35):before,
+.board .departure-board span:nth-child(35):after {
   -webkit-animation-delay: 5.83333s;
   -moz-animation-delay: 5.83333s;
   -o-animation-delay: 5.83333s;
@@ -4591,12 +4889,16 @@ input:focus::placeholder {
   transition-delay: 6.33333s;
 }
 
-.board .departure-board span:nth-child(36):before,
-.board .departure-board span:nth-child(36):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(36):before,
+.board .departure-board span:nth-child(36):after {
   -webkit-animation-delay: 6s;
   -moz-animation-delay: 6s;
   -o-animation-delay: 6s;
@@ -4677,12 +4979,16 @@ input:focus::placeholder {
   transition-delay: 6.5s;
 }
 
-.board .departure-board span:nth-child(37):before,
-.board .departure-board span:nth-child(37):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(37):before,
+.board .departure-board span:nth-child(37):after {
   -webkit-animation-delay: 6.16667s;
   -moz-animation-delay: 6.16667s;
   -o-animation-delay: 6.16667s;
@@ -4763,12 +5069,16 @@ input:focus::placeholder {
   transition-delay: 6.66667s;
 }
 
-.board .departure-board span:nth-child(38):before,
-.board .departure-board span:nth-child(38):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(38):before,
+.board .departure-board span:nth-child(38):after {
   -webkit-animation-delay: 6.33333s;
   -moz-animation-delay: 6.33333s;
   -o-animation-delay: 6.33333s;
@@ -4849,12 +5159,16 @@ input:focus::placeholder {
   transition-delay: 6.83333s;
 }
 
-.board .departure-board span:nth-child(39):before,
-.board .departure-board span:nth-child(39):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(39):before,
+.board .departure-board span:nth-child(39):after {
   -webkit-animation-delay: 6.5s;
   -moz-animation-delay: 6.5s;
   -o-animation-delay: 6.5s;
@@ -4935,12 +5249,16 @@ input:focus::placeholder {
   transition-delay: 7s;
 }
 
-.board .departure-board span:nth-child(40):before,
-.board .departure-board span:nth-child(40):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(40):before,
+.board .departure-board span:nth-child(40):after {
   -webkit-animation-delay: 6.66667s;
   -moz-animation-delay: 6.66667s;
   -o-animation-delay: 6.66667s;
@@ -5021,12 +5339,16 @@ input:focus::placeholder {
   transition-delay: 7.16667s;
 }
 
-.board .departure-board span:nth-child(41):before,
-.board .departure-board span:nth-child(41):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(41):before,
+.board .departure-board span:nth-child(41):after {
   -webkit-animation-delay: 6.83333s;
   -moz-animation-delay: 6.83333s;
   -o-animation-delay: 6.83333s;
@@ -5107,12 +5429,16 @@ input:focus::placeholder {
   transition-delay: 7.33333s;
 }
 
-.board .departure-board span:nth-child(42):before,
-.board .departure-board span:nth-child(42):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(42):before,
+.board .departure-board span:nth-child(42):after {
   -webkit-animation-delay: 7s;
   -moz-animation-delay: 7s;
   -o-animation-delay: 7s;
@@ -5193,12 +5519,16 @@ input:focus::placeholder {
   transition-delay: 7.5s;
 }
 
-.board .departure-board span:nth-child(43):before,
-.board .departure-board span:nth-child(43):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(43):before,
+.board .departure-board span:nth-child(43):after {
   -webkit-animation-delay: 7.16667s;
   -moz-animation-delay: 7.16667s;
   -o-animation-delay: 7.16667s;
@@ -5279,12 +5609,16 @@ input:focus::placeholder {
   transition-delay: 7.66667s;
 }
 
-.board .departure-board span:nth-child(44):before,
-.board .departure-board span:nth-child(44):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(44):before,
+.board .departure-board span:nth-child(44):after {
   -webkit-animation-delay: 7.33333s;
   -moz-animation-delay: 7.33333s;
   -o-animation-delay: 7.33333s;
@@ -5365,12 +5699,16 @@ input:focus::placeholder {
   transition-delay: 7.83333s;
 }
 
-.board .departure-board span:nth-child(45):before,
-.board .departure-board span:nth-child(45):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(45):before,
+.board .departure-board span:nth-child(45):after {
   -webkit-animation-delay: 7.5s;
   -moz-animation-delay: 7.5s;
   -o-animation-delay: 7.5s;
@@ -5451,12 +5789,16 @@ input:focus::placeholder {
   transition-delay: 8s;
 }
 
-.board .departure-board span:nth-child(46):before,
-.board .departure-board span:nth-child(46):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(46):before,
+.board .departure-board span:nth-child(46):after {
   -webkit-animation-delay: 7.66667s;
   -moz-animation-delay: 7.66667s;
   -o-animation-delay: 7.66667s;
@@ -5537,12 +5879,16 @@ input:focus::placeholder {
   transition-delay: 8.16667s;
 }
 
-.board .departure-board span:nth-child(47):before,
-.board .departure-board span:nth-child(47):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(47):before,
+.board .departure-board span:nth-child(47):after {
   -webkit-animation-delay: 7.83333s;
   -moz-animation-delay: 7.83333s;
   -o-animation-delay: 7.83333s;
@@ -5623,12 +5969,16 @@ input:focus::placeholder {
   transition-delay: 8.33333s;
 }
 
-.board .departure-board span:nth-child(48):before,
-.board .departure-board span:nth-child(48):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(48):before,
+.board .departure-board span:nth-child(48):after {
   -webkit-animation-delay: 8s;
   -moz-animation-delay: 8s;
   -o-animation-delay: 8s;
@@ -5709,12 +6059,16 @@ input:focus::placeholder {
   transition-delay: 8.5s;
 }
 
-.board .departure-board span:nth-child(49):before,
-.board .departure-board span:nth-child(49):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(49):before,
+.board .departure-board span:nth-child(49):after {
   -webkit-animation-delay: 8.16667s;
   -moz-animation-delay: 8.16667s;
   -o-animation-delay: 8.16667s;
@@ -5795,12 +6149,16 @@ input:focus::placeholder {
   transition-delay: 8.66667s;
 }
 
-.board .departure-board span:nth-child(50):before,
-.board .departure-board span:nth-child(50):after {
+.board .departure-board.anim span.letter:before,
+.board .departure-board.anim span.letter:after {
   -webkit-animation: anim 0.6s 1 ease-in-out;
   -moz-animation: anim 0.6s 1 ease-in-out;
   -o-animation: anim 0.6s 1 ease-in-out;
   animation: anim 0.6s 1 ease-in-out;
+}
+
+.board .departure-board span:nth-child(50):before,
+.board .departure-board span:nth-child(50):after {
   -webkit-animation-delay: 8.33333s;
   -moz-animation-delay: 8.33333s;
   -o-animation-delay: 8.33333s;
@@ -5888,25 +6246,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "A";
+    content: "N";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "A";
+    content: "O";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "Y";
+    content: "D";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "V";
+    content: "T";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5924,25 +6282,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "A";
+    content: "N";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "A";
+    content: "O";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "Y";
+    content: "D";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "V";
+    content: "T";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -5959,22 +6317,22 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "A";
+    content: "N";
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "A";
+    content: "O";
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "Y";
+    content: "D";
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "V";
+    content: "T";
     transform: rotateX(0deg);
   }
 
@@ -5991,28 +6349,28 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "A";
+    content: "N";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "A";
+    content: "O";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "Y";
+    content: "D";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "V";
+    content: "T";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
@@ -6027,6 +6385,7 @@ input:focus::placeholder {
 
 .welcome {
   padding: 4rem 0 0;
+  background-color: #b4ffe7;
 }
 
 .welcome .container {
@@ -6660,6 +7019,7 @@ input:focus::placeholder {
 
 .requirements {
   padding: 5rem 0 4.5rem;
+  background-color: #b4ffe7;
 }
 
 .requirements .info-img {
@@ -6917,6 +7277,25 @@ input:focus::placeholder {
 
   .btn.search input {
     font-size: 1.8rem;
+  }
+
+  .loader {
+    background-image: url("../images/loader-bg.png");
+  }
+
+  .loader-wrap {
+    padding: 5rem;
+    margin-bottom: 5rem;
+    max-width: 60rem;
+  }
+
+  .loader-wrap .loading-bar {
+    margin-bottom: 5.5rem;
+  }
+
+  .loader-wrap .btn {
+    margin: 0 0 5rem;
+    padding: 0.8rem 1.6rem;
   }
 
   .welcome {
@@ -7440,6 +7819,18 @@ input:focus::placeholder {
 }
 
 @media (min-width: 1200px) {
+  .loader-wrap {
+    max-width: 70rem;
+  }
+
+  .loader-wrap .loader-logo {
+    padding: 0 10rem;
+  }
+
+  .loader-wrap p {
+    padding: 0 10rem;
+  }
+
   .ticket .ticket-wrap .ticket-img {
     max-width: 64.5rem;
   }

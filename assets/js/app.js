@@ -5,6 +5,8 @@
 
 var _aos = _interopRequireDefault(require("aos"));
 
+var _loader = _interopRequireDefault(require("./modules/loader"));
+
 var _simplebar = _interopRequireDefault(require("./modules/simplebar"));
 
 var _burgerMenu = _interopRequireDefault(require("./modules/burger-menu"));
@@ -19,8 +21,6 @@ var _postcards = _interopRequireDefault(require("./modules/postcards"));
 
 var _scrollSmooth = _interopRequireDefault(require("./modules/scroll-smooth"));
 
-var _sound = _interopRequireDefault(require("./modules/sound"));
-
 var _map = _interopRequireDefault(require("./modules/map"));
 
 var _board = _interopRequireDefault(require("./modules/board"));
@@ -31,9 +31,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 //
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
+// import sound from './modules/sound';
 (function ($) {
   // When DOM is ready
   $(function () {
+    _loader["default"].init();
+
     _board["default"].init();
 
     _simplebar["default"].init();
@@ -46,9 +49,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
     _postcards["default"].init();
 
-    _scrollSmooth["default"].init();
+    _scrollSmooth["default"].init(); // sound.init();
 
-    _sound["default"].init();
 
     _map["default"].init();
 
@@ -64,7 +66,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   });
 })(jQuery);
 
-},{"./modules/board":3,"./modules/burger-menu":4,"./modules/crew-data":5,"./modules/flight-mode":6,"./modules/map":7,"./modules/postcards":8,"./modules/scroll-smooth":9,"./modules/simplebar":10,"./modules/slider":11,"./modules/sound":12,"aos":1}],3:[function(require,module,exports){
+},{"./modules/board":3,"./modules/burger-menu":4,"./modules/crew-data":5,"./modules/flight-mode":6,"./modules/loader":7,"./modules/map":8,"./modules/postcards":9,"./modules/scroll-smooth":10,"./modules/simplebar":11,"./modules/slider":12,"aos":1}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -169,7 +171,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 
 var flightMode = function () {
-  var flightModeButtons = document.querySelectorAll('.flight-mode');
+  var flightModeButtons = document.querySelectorAll('.flight-mode-btn');
   var header = document.querySelector('.header');
   var audio = document.getElementById('audio');
 
@@ -205,6 +207,59 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var loader = function loader() {
+  var loaderInit = function loaderInit() {
+    var body = document.body;
+    body.classList.add('lock');
+    var button = document.getElementById('loader-btn');
+    var loading = document.querySelector('.loader .loading');
+    button.addEventListener('click', function () {
+      loading.classList.remove('hidden');
+      var counter = 0;
+      var audioBoard = document.getElementById('audio-board');
+      var audioTannoy = document.getElementById('audio-tannoy');
+      var departureBoard = document.querySelector('.departure-board');
+      var i = setInterval(function () {
+        $('.loader .bar-fill').css('width', "".concat(counter, "%"));
+        counter++;
+
+        if (counter === 90) {
+          clearInterval(i);
+          body.classList.remove('lock');
+          $('.loader').fadeOut('slow');
+          departureBoard.classList.add('anim');
+          audioBoard.play();
+          var lastBoardLetter = document.querySelector('.board .row.first .last');
+          lastBoardLetter.addEventListener('animationend', function () {
+            audioBoard.pause();
+            audioTannoy.play();
+          });
+        }
+      }, 15);
+    });
+  };
+
+  var init = function init() {
+    loaderInit();
+  };
+
+  return {
+    init: init
+  };
+};
+
+var _default = loader();
+
+exports["default"] = _default;
+
+},{}],8:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
 var map = function () {
   var mapButton = document.querySelector('.map-link');
   var image = document.querySelector('.map img');
@@ -229,7 +284,7 @@ var map = function () {
 var _default = map;
 exports["default"] = _default;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -260,7 +315,7 @@ var postcards = function () {
 var _default = postcards;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -320,7 +375,7 @@ var scrollSmooth = function () {
 var _default = scrollSmooth;
 exports["default"] = _default;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -348,7 +403,7 @@ var simplebar = function () {
 var _default = simplebar;
 exports["default"] = _default;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -390,50 +445,6 @@ var swiperSlider = function () {
 }();
 
 var _default = swiperSlider;
-exports["default"] = _default;
-
-},{}],12:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var sound = function () {
-  var soundButton = document.querySelectorAll('.sound');
-  var audioBoard = document.getElementById('audio-board');
-  var audioTannoy = document.getElementById('audio-tannoy');
-  var lastBoardLetter = document.querySelector('.board .row.first .last');
-
-  var soundInit = function soundInit() {
-    soundButton.forEach(function (element) {
-      element.addEventListener('click', function () {
-        if (audioBoard.paused) {
-          audioBoard.play();
-          element.classList.remove('off');
-        } else {
-          audioBoard.pause();
-          element.classList.add('off');
-        }
-      });
-    });
-    lastBoardLetter.addEventListener('animationend', function () {
-      audioBoard.pause();
-      audioTannoy.play();
-    });
-  };
-
-  var init = function init() {
-    soundInit();
-  };
-
-  return {
-    init: init
-  };
-}();
-
-var _default = sound;
 exports["default"] = _default;
 
 },{}]},{},[2]);
