@@ -4,7 +4,7 @@ Class Member
 {
 
 //    public $apiKey = 'AIzaSyCZyFHKmSm73yX1QNAxahRWHhK5GsRvxkU';
-    public $apiKey = 'zljvnbz3ys5ph9pfmfzkg0j2tz9xvprn7cmbcx';
+    public $apiKey = 'nfysjt1i4tb42tckhjlio4v3244h7lcjnwjr8s';
     public $apiUrlGetMembers = 'http://cms.podgeevents.com/api2/get-members/key/';
     public $apiUrlGetPhoto = 'http://cms.podgeevents.com/api2/getphoto/key/';
     public $apiUrlGetDir = '/dir/150/photo/';
