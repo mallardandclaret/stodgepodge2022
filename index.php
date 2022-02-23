@@ -19,6 +19,24 @@ $membersStr = $Member->get();
 </head>
 
 <body>
+    <div class="loader">
+    <div class="loader-wrap">
+      <div class="loader-logo">
+        <img src="assets/images/podge-logo-green.svg" alt="">
+      </div>
+      <p>Please fasten your seatbelts and enable sound, Podge Airways is preparing for take-off</p>
+      <div class="loading hidden">
+        <span>Loading...</span>
+        <div class="loading-bar">
+          <div class="bar-fill"></div>
+        </div>
+      </div>
+      <button class="btn secondary" id="loader-btn">
+        Click to enter
+      </button>
+      <p class="disclaimer"><strong>Disclaimer:</strong> In the event of an evacuation a prize will be awarded for the best emergency slide performance</p>
+    </div>
+  </div>
   <div class="wrapper">
     <header class="header">
       <div class="container">
