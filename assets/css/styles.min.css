@@ -1215,7 +1215,7 @@ input:focus::placeholder {
   width: 3rem;
   height: 30rem;
   background-color: #191717;
-  z-index: -1;
+  z-index: 0;
   top: 0;
   -webkit-transform-origin: top center;
   -moz-transform-origin: top center;
@@ -6246,25 +6246,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "N";
+    content: "Q";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "O";
+    content: "A";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "D";
+    content: "F";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "T";
+    content: "0";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -6282,25 +6282,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "N";
+    content: "Q";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "O";
+    content: "A";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "D";
+    content: "F";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "T";
+    content: "0";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -6317,22 +6317,22 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "N";
+    content: "Q";
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "O";
+    content: "A";
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "D";
+    content: "F";
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "T";
+    content: "0";
     transform: rotateX(0deg);
   }
 
@@ -6349,28 +6349,28 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "N";
+    content: "Q";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   40% {
-    content: "O";
+    content: "A";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 
   60% {
-    content: "D";
+    content: "F";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   80% {
-    content: "T";
+    content: "0";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
