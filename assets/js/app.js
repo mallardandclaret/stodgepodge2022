@@ -21,6 +21,8 @@ var _postcards = _interopRequireDefault(require("./modules/postcards"));
 
 var _scrollSmooth = _interopRequireDefault(require("./modules/scroll-smooth"));
 
+var _sound = _interopRequireDefault(require("./modules/sound"));
+
 var _map = _interopRequireDefault(require("./modules/map"));
 
 var _board = _interopRequireDefault(require("./modules/board"));
@@ -31,7 +33,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 //
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
-// import sound from './modules/sound';
 (function ($) {
   // When DOM is ready
   $(function () {
@@ -49,8 +50,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
     _postcards["default"].init();
 
-    _scrollSmooth["default"].init(); // sound.init();
+    _scrollSmooth["default"].init();
 
+    _sound["default"].init();
 
     _map["default"].init();
 
@@ -66,7 +68,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   });
 })(jQuery);
 
-},{"./modules/board":3,"./modules/burger-menu":4,"./modules/crew-data":5,"./modules/flight-mode":6,"./modules/loader":7,"./modules/map":8,"./modules/postcards":9,"./modules/scroll-smooth":10,"./modules/simplebar":11,"./modules/slider":12,"aos":1}],3:[function(require,module,exports){
+},{"./modules/board":3,"./modules/burger-menu":4,"./modules/crew-data":5,"./modules/flight-mode":6,"./modules/loader":7,"./modules/map":8,"./modules/postcards":9,"./modules/scroll-smooth":10,"./modules/simplebar":11,"./modules/slider":12,"./modules/sound":13,"aos":1}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -173,16 +175,19 @@ exports["default"] = void 0;
 var flightMode = function () {
   var flightModeButtons = document.querySelectorAll('.flight-mode-btn');
   var header = document.querySelector('.header');
-  var audio = document.getElementById('audio');
+  var audio = document.querySelectorAll('audio');
 
   var flightModeInit = function flightModeInit() {
     flightModeButtons.forEach(function (element) {
       element.addEventListener('click', function () {
         header.classList.toggle('white');
-
-        if (audio.played) {
-          audio.pause();
-        }
+        audio.forEach(function (element) {
+          if (!element.muted) {
+            element.muted = true;
+          } else {
+            element.muted = false;
+          }
+        });
       });
     });
   };
@@ -445,6 +450,44 @@ var swiperSlider = function () {
 }();
 
 var _default = swiperSlider;
+exports["default"] = _default;
+
+},{}],13:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var sound = function () {
+  var soundButton = document.querySelector('.sound-btn');
+  var audio = document.querySelectorAll('audio');
+
+  var soundInit = function soundInit() {
+    soundButton.addEventListener('click', function () {
+      audio.forEach(function (element) {
+        if (!element.muted) {
+          element.muted = true;
+          soundButton.classList.add('off');
+        } else {
+          element.muted = false;
+          soundButton.classList.remove('off');
+        }
+      });
+    });
+  };
+
+  var init = function init() {
+    soundInit();
+  };
+
+  return {
+    init: init
+  };
+}();
+
+var _default = sound;
 exports["default"] = _default;
 
 },{}]},{},[2]);
