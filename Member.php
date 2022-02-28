@@ -14,8 +14,6 @@ Class Member
     /* Get Data From XML */
     function get()
     {
-        $this->updateCache();
-
         $fileXML = false;
         if((file_exists('members.xml'))){
             $fileXML = simplexml_load_file('members.xml');
