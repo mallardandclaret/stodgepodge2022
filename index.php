@@ -1,9 +1,10 @@
 <?php
 require_once('Member.php');
 $Member = new Member();
-if ($_GET['updateMembers']) {
-  $Member->updateCache();
-}
+// if ($_GET['updateMembers']) {
+//   $Member->updateCache();
+// }
+$Member->updateCache();
 $membersStr = $Member->get();
 ?>
 <!DOCTYPE html>
