@@ -1108,7 +1108,7 @@ input:focus::placeholder {
 }
 
 .loader-wrap .loader-logo {
-  max-width: 50rem;
+  max-width: 35rem;
   margin-bottom: 3rem;
 }
 
@@ -6246,25 +6246,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "4";
-    -webkit-transform: rotateX(360deg);
-    transform: rotateX(360deg);
-  }
-
-  40% {
-    content: "I";
-    -webkit-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-  }
-
-  60% {
     content: "J";
     -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
+  40% {
+    content: "8";
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  60% {
+    content: "Z";
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+  }
+
   80% {
-    content: "H";
+    content: "E";
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -6282,25 +6282,25 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "4";
-    -moz-transform: rotateX(360deg);
-    transform: rotateX(360deg);
-  }
-
-  40% {
-    content: "I";
-    -moz-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-  }
-
-  60% {
     content: "J";
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
+  40% {
+    content: "8";
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  60% {
+    content: "Z";
+    -moz-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+  }
+
   80% {
-    content: "H";
+    content: "E";
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
@@ -6317,22 +6317,22 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "4";
-    transform: rotateX(360deg);
-  }
-
-  40% {
-    content: "I";
-    transform: rotateX(0deg);
-  }
-
-  60% {
     content: "J";
     transform: rotateX(360deg);
   }
 
+  40% {
+    content: "8";
+    transform: rotateX(0deg);
+  }
+
+  60% {
+    content: "Z";
+    transform: rotateX(360deg);
+  }
+
   80% {
-    content: "H";
+    content: "E";
     transform: rotateX(0deg);
   }
 
@@ -6349,28 +6349,28 @@ input:focus::placeholder {
   }
 
   20% {
-    content: "4";
-    -webkit-transform: rotateX(360deg);
-    -moz-transform: rotateX(360deg);
-    transform: rotateX(360deg);
-  }
-
-  40% {
-    content: "I";
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-  }
-
-  60% {
     content: "J";
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
+  40% {
+    content: "8";
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  60% {
+    content: "Z";
+    -webkit-transform: rotateX(360deg);
+    -moz-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+  }
+
   80% {
-    content: "H";
+    content: "E";
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
@@ -7284,13 +7284,13 @@ input:focus::placeholder {
   }
 
   .loader-wrap {
-    padding: 5rem;
+    padding: 8rem;
     margin-bottom: 5rem;
     max-width: 60rem;
   }
 
   .loader-wrap .loading-bar {
-    margin-bottom: 5.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .loader-wrap .btn {
@@ -7821,14 +7821,20 @@ input:focus::placeholder {
 @media (min-width: 1200px) {
   .loader-wrap {
     max-width: 70rem;
+    padding: 5rem;
   }
 
   .loader-wrap .loader-logo {
     padding: 0 10rem;
+    max-width: 50rem;
   }
 
   .loader-wrap p {
     padding: 0 10rem;
+  }
+
+  .loader-wrap .loading-bar {
+    margin-bottom: 5.5rem;
   }
 
   .ticket .ticket-wrap .ticket-img {
