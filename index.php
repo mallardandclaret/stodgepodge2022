@@ -573,6 +573,7 @@ $membersStr = $Member->get();
     let inmatesHtml = '';
 
     for (let key in jsonStr) {
+      console.log(jsonStr, key)
       // if (jsonStr.result.hasOwnProperty(key)) {
       let inmate = jsonStr[key];
       let name = inmate.First_Name + ' ' + inmate.Last_Name;
