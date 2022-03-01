@@ -329,7 +329,7 @@ $membersStr = $Member->get();
             <h1 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">Welcome to</h1>
             <img src="assets/images/podge-logo-blue.svg" alt="" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
           </div>
-          <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">Ladies and gentleman, please fasten your seat belts. Podge Airways Flight SP303 to Manchester is ready for departure.</p>
+          <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">Ladies and gentleman, please fasten your seat belts. Podge Airways Flight SP906 to Manchester is ready for departure.</p>
           <img src="assets/images/welcome-img.png" alt="" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
         </div>
       </section>
@@ -338,7 +338,7 @@ $membersStr = $Member->get();
           <div class="ticket-wrap">
             <div class="ticket-info">
               <h2>Prepare for Take-Off...</h2>
-              <p>Welcome aboard Podge Airways Flight SP255 to Manchester. Our flight time to Stodge Podge will be approximately four hours. Please sit back, relax and enjoy the flight.</p>
+              <p>Welcome aboard Podge Airways Flight SP906 to Manchester. Our flight time to Stodge Podge will be approximately four hours. Please sit back, relax and enjoy the flight.</p>
             </div>
             <div class="ticket-img mobile">
               <img src="assets/images/ticket-mobile.png" alt="">
