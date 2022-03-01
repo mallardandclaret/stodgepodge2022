@@ -223,6 +223,7 @@ var loader = function loader() {
       var counter = 0;
       var audioBoard = document.getElementById('audio-board');
       var audioTannoy = document.getElementById('audio-tannoy');
+      var audioChatter = document.getElementById('audio-chatter');
       var departureBoard = document.querySelector('.departure-board');
       var i = setInterval(function () {
         $('.loader .bar-fill').css('width', "".concat(counter, "%"));
@@ -238,6 +239,10 @@ var loader = function loader() {
           lastBoardLetter.addEventListener('animationend', function () {
             audioBoard.pause();
             audioTannoy.play();
+
+            audioTannoy.addEventListener("ended", function () {
+              audioChatter.play()
+            })
           });
         }
       }, 15);
