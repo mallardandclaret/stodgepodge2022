@@ -7206,10 +7206,16 @@ input:focus::placeholder {
     display: none;
     max-width: 58.5rem;
     margin-bottom: 6.5rem;
+    display: grid !important;
+    grid-gap: 13% 10%;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
 }
 
 .sponsors .container .sponsors-wrap img {
-    margin-bottom: 6rem;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .sponsors .container .sponsors-wrap img:last-child {
@@ -7256,6 +7262,10 @@ input:focus::placeholder {
 
     .header .logo {
         width: 16rem;
+    }
+
+    .sponsors .container .sponsors-wrap {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -7455,7 +7465,7 @@ input:focus::placeholder {
     }
 
     .sponsors .container .sponsors-wrap {
-        display: block;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .sponsors .container .sponsors-wrap-mob {
