@@ -7207,15 +7207,16 @@ input:focus::placeholder {
     max-width: 58.5rem;
     margin-bottom: 6.5rem;
     display: grid !important;
-    grid-gap: 13% 10%;
+    grid-gap: 3rem 4rem;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .sponsors .container .sponsors-wrap img {
     max-width: 90%;
     max-height: 90%;
+    margin: 0 auto;
 }
 
 .sponsors .container .sponsors-wrap img:last-child {
@@ -7265,13 +7266,17 @@ input:focus::placeholder {
     }
 
     .sponsors .container .sponsors-wrap {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (min-width: 576px) {
     .destination .destination-info .map-panel {
         margin: 0 auto 4rem;
+    }
+
+    .sponsors .container .sponsors-wrap {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
