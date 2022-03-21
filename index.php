@@ -332,7 +332,7 @@ $membersStr = $Member->get();
             <img src="assets/images/podge-logo-blue.svg" alt="" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
           </div>
           <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">Ladies and gentleman, please fasten your seat belts. Podge Airways Flight SP906 to Manchester is ready for departure.</p>
-          <img src="assets/images/welcome-img.png" alt="" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <!-- <img src="assets/images/welcome-img.png" alt="" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> -->
         </div>
       </section>
       <section class="ticket">
@@ -552,28 +552,29 @@ $membersStr = $Member->get();
                 data-aos-duration="1000">
               <img src="assets/images/logo-bar.png" alt="" data-aos="fade-up" data-aos-easing="ease-in-out"
                 data-aos-duration="1000"> -->
-              <img src="assets/images/logos/accenture.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/adam.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/agency.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/getty.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/jupiter.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/justfix.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/drum.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/mandc.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/story.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/cactus.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
-              <img src="assets/images/logos/loft.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000">
+              <a href="https://www.accenture.com/gb-en/about/accenture-interactive-index" target="_blank"> <img
+                  src="assets/images/logos/accenture.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
+                  data-aos-duration="1000"> </a>
+              <a href="https://www.weareadam.com/" target="_blank"> <img src="assets/images/logos/adam.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://www.theagencyworks.co.uk/" target="_blank"> <img src="assets/images/logos/agency.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://www.gettyimages.co.uk/" target="_blank"> <img src="assets/images/logos/getty.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://www.jupitervc.com/" target="_blank"> <img src="assets/images/logos/jupiter.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://www.justfix.app/" target="_blank"> <img src="assets/images/logos/justfix.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://www.thedrum.com/" target="_blank"> <img src="assets/images/logos/drum.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://www.mallardandclaret.com/" target="_blank"> <img src="assets/images/logos/mandc.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://storystream.ai/" target="_blank"> <img src="assets/images/logos/story.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://www.cact.us/" target="_blank"> <img src="assets/images/logos/cactus.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://theloft.agency/" target="_blank"> <img src="assets/images/logos/loft.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
             </div>
             <img src="assets/images/stars.svg" alt="" class="stars-icon" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
           </div>
