@@ -7204,10 +7204,10 @@ input:focus::placeholder {
 
 .sponsors .container .sponsors-wrap {
     display: none;
-    max-width: 58.5rem;
+    max-width: 76.5rem;
     margin-bottom: 6.5rem;
     display: grid !important;
-    grid-gap: 3rem 4rem;
+    grid-gap: 3rem 5rem;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr;
@@ -7215,7 +7215,7 @@ input:focus::placeholder {
 
 .sponsors .container .sponsors-wrap img {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 80%;
     margin: 0 auto;
 }
 
