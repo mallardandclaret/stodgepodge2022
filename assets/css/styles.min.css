@@ -7213,9 +7213,13 @@ input:focus::placeholder {
     grid-template-columns: 1fr;
 }
 
+.sponsors .container .sponsors-wrap a {
+    display: flex;
+    align-items: center;
+}
+
 .sponsors .container .sponsors-wrap img {
-    max-width: 90%;
-    max-height: 80%;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -7267,6 +7271,10 @@ input:focus::placeholder {
 
     .sponsors .container .sponsors-wrap {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .sponsors .container .sponsors-wrap img {
+        max-width: 70%;
     }
 }
 
@@ -7471,6 +7479,10 @@ input:focus::placeholder {
 
     .sponsors .container .sponsors-wrap {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .sponsors .container .sponsors-wrap img {
+        max-width: 90%;
     }
 
     .sponsors .container .sponsors-wrap-mob {
