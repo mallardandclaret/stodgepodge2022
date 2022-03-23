@@ -412,9 +412,9 @@ $membersStr = $Member->get();
                 <h3 class="h1" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">Date & Time</h3>
                 <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
                 <strong>Thursday 9th June 2022</strong> <br><br>
-                  <strong>12.30pm - </strong> Drinks reception<br>
+                  <strong>12.30pm </strong> Drinks reception<br>
                   <strong>1.15pm - 4.30pm</strong> Long lunch <br>
-                  <strong>4.30pm - late -</strong> Drinks and light bites in the bar
+                  <strong>4.30pm - late</strong> Drinks and light bites in the bar
                 </p>
               </div>
               <div class="address">
@@ -423,7 +423,7 @@ $membersStr = $Member->get();
                   <strong>Roof Terrace,</strong> <br>
                   Manchester Hall, <br>
                   36 Bridge St, <br>
-                  Greater Manchester, <br>
+                  Manchester, <br>
                   M3 3BT
                 </p>
               </div>
