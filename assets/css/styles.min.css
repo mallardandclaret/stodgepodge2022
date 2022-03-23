@@ -6703,6 +6703,7 @@ input:focus::placeholder {
 .destination .destination-info .date,
 .destination .destination-info .address {
     margin-bottom: 3.5rem;
+    width: 50%;
 }
 
 .destination .destination-info .date h3,
