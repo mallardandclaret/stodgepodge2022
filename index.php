@@ -407,9 +407,9 @@ $membersStr = $Member->get();
                 <h3 class="h1" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">Date & Time</h3>
                 <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
                   <strong>Wednesday 25th May 2022</strong> <br><br>
-                  <strong>12.30pm - </strong>Start time and drinks reception <br>
+                  <strong>12.30pm - </strong> Drinks reception<br>
                   <strong>1.15pm - 4.30pm</strong> Long lunch <br>
-                  <strong>4.30pm until late -</strong> Drinks and fish n chips
+                  <strong>4.30pm until late -</strong> Drinks and light bites in the bar
                 </p>
               </div>
               <div class="address">
@@ -546,29 +546,30 @@ $membersStr = $Member->get();
           <div class="container">
             <img src="assets/images/crown-icon.svg" alt="" class="crown-icon" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
             <h2 class="h1" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">First Class Lounge</h2>
-            <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">No riff raff here.</p>
-            <div class="sponsors-wrap">
-                <a href="https://www.accenture.com/gb-en/about/accenture-interactive-index" target="_blank"> <img
+            <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">No riff raff here. Please raise
+              a glass to our incredible supporters</p>
+              <div class="sponsors-wrap">
+              <a href="https://www.accenture.com/gb-en/about/accenture-interactive-index" target="_blank"> <img
                   src="assets/images/logos/accenture.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                  data-aos-duration="1000" style="transform: scale(1.3);"> </a>
+                  data-aos-duration="1000" style="transform: scale(1.4);"> </a>
               <a href="https://www.weareadam.com/" target="_blank"> <img src="assets/images/logos/adam.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://www.theagencyworks.co.uk/" target="_blank"> <img src="assets/images/logos/agency.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://www.gettyimages.co.uk/" target="_blank"> <img src="assets/images/logos/getty.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+              <a href="https://www.cact.us/" target="_blank"> <img src="assets/images/logos/cactus.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://www.jupitervc.com/" target="_blank"> <img src="assets/images/logos/jupiter.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://www.justfix.app/" target="_blank"> <img src="assets/images/logos/justfix.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://www.thedrum.com/" target="_blank"> <img style="filter: invert(1);"
-                src="assets/images/logos/drum.png" data-aos="fade-up" data-aos-easing="ease-in-out"
-                data-aos-duration="1000"> </a>
+                  src="assets/images/logos/drum.png" data-aos="fade-up" data-aos-easing="ease-in-out"
+                  data-aos-duration="1000"> </a>
               <a href="https://www.mallardandclaret.com/" target="_blank"> <img src="assets/images/logos/mandc.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://storystream.ai/" target="_blank"> <img src="assets/images/logos/story.svg"
-                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
-              <a href="https://www.cact.us/" target="_blank"> <img src="assets/images/logos/cactus.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://theloft.agency/" target="_blank"> <img src="assets/images/logos/loft.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
