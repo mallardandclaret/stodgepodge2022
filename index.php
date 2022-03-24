@@ -361,7 +361,7 @@ $membersStr = $Member->get();
           <div class="destination-desc">
             <h2 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">Destination Stodge</h2>
             <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
-              With stylish surroundings and expansive views over Manchester, Harvey Nichols is the premier luxury destination
+              With stylish surroundings and expansive views over Manchester, Manchester Hall is the premier luxury destination
               for your creative getaway. <br><br>
               Drinks reception, 3 course meal with unlimited wine. Evening bar with healthy
               tab to keep us going until the fish and chips arrive. <br><br>
