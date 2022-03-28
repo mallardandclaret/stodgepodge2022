@@ -12,12 +12,14 @@ $membersStr = $Member->get();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stodge Podge</title>
+  <title>Stodge Podge 2022</title>
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
   <link rel="preload" as="image" href="assets/images/loader-bg-min.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
+  <meta name="description" content="Podge Airways Flight SP0906 is ready for departure. Destination Manchester awaits on Thursday 9th June.">
+  <meta name="title" content="Stodge Podge 2022">
   <link rel="icon" type="image/png" href="assets/images/group-213.png">
 </head>
 
@@ -601,7 +603,6 @@ $membersStr = $Member->get();
     let inmatesHtml = '';
 
     for (let key in jsonStr) {
-      console.log(jsonStr, key)
       // if (jsonStr.result.hasOwnProperty(key)) {
       let inmate = jsonStr[key];
       let name = inmate.First_Name + ' ' + inmate.Last_Name;
