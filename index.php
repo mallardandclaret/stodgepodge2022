@@ -569,7 +569,7 @@ $membersStr = $Member->get();
               <a href="https://www.cact.us/" target="_blank"> <img src="assets/images/logos/cactus.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://www.forrestbrown.co.uk" target="_blank"> <img src="assets/images/logos/fb-white.svg"
-                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" style="transform: scale(1.4);" > </a>
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" style="transform: scale(1.2);" > </a>
               <a href="https://www.justfix.app/" target="_blank"> <img src="assets/images/logos/justfix.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://www.thedrum.com/" target="_blank"> <img style="filter: invert(1);"
