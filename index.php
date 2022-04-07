@@ -575,13 +575,15 @@ $membersStr = $Member->get();
               <a href="https://www.thedrum.com/" target="_blank"> <img style="filter: invert(1);"
                   src="assets/images/logos/drum.png" data-aos="fade-up" data-aos-easing="ease-in-out"
                   data-aos-duration="1000"> </a>
-              <a href="https://www.mallardandclaret.com/" target="_blank"> <img src="assets/images/logos/mandc.svg"
+              <a href="https://thefuturefactory.co.uk/" target="_blank"> <img src="assets/images/logos/future-factory.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://storystream.ai/" target="_blank"> <img src="assets/images/logos/story.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://theloft.agency/" target="_blank"> <img src="assets/images/logos/loft.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
                    <a href="https://www.jupitervc.com/" target="_blank"> <img src="assets/images/logos/jupiter.svg"
+                  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
+                  <a href="https://www.mallardandclaret.com/" target="_blank"> <img src="assets/images/logos/mandc.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
             </div>
             <img src="assets/images/stars.svg" alt="" class="stars-icon" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">
