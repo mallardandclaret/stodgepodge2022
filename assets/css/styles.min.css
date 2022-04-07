@@ -7479,7 +7479,7 @@ input:focus::placeholder {
     }
 
     .sponsors .container .sponsors-wrap {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
     .sponsors .container .sponsors-wrap img {
