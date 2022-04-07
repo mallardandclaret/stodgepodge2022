@@ -559,7 +559,7 @@ $membersStr = $Member->get();
               <div style="text-align:center;" class="sponsors-wrap">
               <a href="https://www.accenture.com/gb-en/about/accenture-interactive-index" target="_blank"> <img
                   src="assets/images/logos/accenture.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
-                  data-aos-duration="1000" style="transform: scale(1.4);"> </a>
+                  data-aos-duration="1000" style="transform: scale(1.5);"> </a>
               <a href="https://www.weareadam.com/" target="_blank"> <img src="assets/images/logos/adam.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://www.theagencyworks.co.uk/" target="_blank"> <img src="assets/images/logos/agency.svg"
@@ -581,7 +581,7 @@ $membersStr = $Member->get();
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a href="https://theloft.agency/" target="_blank"> <img src="assets/images/logos/loft.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
-                   <a href="https://www.jupitervc.com/" target="_blank"> <img src="assets/images/logos/jupiter.svg"
+                   <a href="https://www.jupitervc.com/" style="transform: scale(1.4); target="_blank"> <img src="assets/images/logos/jupiter.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
               <a  href="https://www.mallardandclaret.com/" target="_blank"> <img src="assets/images/logos/mandc.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
