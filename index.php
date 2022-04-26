@@ -558,7 +558,7 @@ $membersStr = $Member->get();
               a glass to our incredible supporters</p>
               <div style="text-align:center;" class="sponsors-wrap">
               <a href="https://www.accenture.com/gb-en/about/accenture-interactive-index" target="_blank"> <img
-                  src="assets/images/logos/accenture.svg" data-aos="fade-up" data-aos-easing="ease-in-out"
+                  src="assets/images/logos/accenture.png" data-aos="fade-up" data-aos-easing="ease-in-out"
                   data-aos-duration="1000" style="transform: scale(1.5);"> </a>
               <a href="https://www.weareadam.com/" target="_blank"> <img src="assets/images/logos/adam.svg"
                   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"> </a>
